@@ -1,0 +1,123 @@
+@font-face {
+    font-family: BigNoodle; 
+    src: url(./fonts/BigNoodle.ttf); 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    transition: all 0.2s;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.section-inner{
+    width: 1000px;
+    height: 146px;
+    margin: 0 auto;
+    font-family: "BigNoodle";
+    text-align: center;
+}
+
+.main{
+    width: 100vw;
+    margin: 0 auto;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 224px;
+        font-size: 40px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+
+    }
+
+    .burger{
+        cursor: pointer;
+
+        a {  
+            // cursor: pointer;
+            padding: 12px;
+            text-align: justify;  
+            
+            span {
+              position: relative;
+              display: block;
+              width: 38px;
+              height: 2px;
+              background: #222;
+              transition: all .2s ease-in-out;
+              
+              &:before, &:after {
+                position: absolute;
+                background: #222;
+                content: '';
+                width: 38px;
+                height: 2px;
+                transition: all .2s ease-in-out;
+              }
+              
+              &:before {
+                top: -10px;
+              }
+              
+              &:after {
+                top: 10px;
+              }
+            }
+        }
+        .active {
+            span {
+              background: transparent;  
+              
+              &:before {
+                transform: rotate(45deg) translate(6px, 8px);
+              }
+              
+              &:after {
+                transform: rotate(-45deg) translate(6px, -8px);
+              }
+            }
+        } 
+        
+    }
+}
+
+        
+    
+
+
+.main-title{
+    background-color: #353535;
+    color: #d6d5d5;
+    height: 708px;
+    display: flex;
+    align-items: center;
+
+    h1{
+        font-size: 72px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+    }
+
+    .suptitle{
+        font-size: 36px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .scroll{
+        margin: 250px;
+    }
+}
